@@ -1,6 +1,6 @@
 {% set name = "cardiac-mps" %}
 {% set name_underscore = "cardiac_mps" %}
-{% set version = "2023.1.1" %}
+{% set version = "2023.2.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -8,7 +8,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name_underscore }}-{{ version }}.tar.gz"
-  sha256: f2f129468fce644a0e0ecfe45dcfd77d97615262e7e6b55d5b1fa665ac730396
+  sha256: 362df9d5799ae84ba670fd14e88013fe476427e7776ede941bf10f1750c7194f
 
 build:
   number: 0
@@ -19,7 +19,6 @@ build:
     - "mps-summary=mps.__main__:run_summary"
     - "mps-analyze=mps.__main__:run_analyze"
     - "mps-motion=mps.__main__:run_motion"
-    
   script: python -m pip install -v --no-deps .
 
 requirements:
@@ -53,7 +52,7 @@ about:
   home: https://github.com/ComputationalPhysiology/mps
   summary: Tools for working with cardiac mps files
   license: LGPL-2.1-or-later AND BSD-3-Clause AND BSD-2-Clause
-  license_file: 
+  license_file:
     - LICENSE
     - licenses/LICENSE_czifile
     - licenses/LICENSE_nd2file
