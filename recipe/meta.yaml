@@ -32,7 +32,6 @@ requirements:
     - imageio-ffmpeg
     - matplotlib-base
     - numpy
-    - scikit-image
     - scipy
     - tifffile
     - typer
