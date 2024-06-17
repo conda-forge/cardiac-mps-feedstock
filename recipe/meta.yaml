@@ -1,6 +1,6 @@
 {% set name = "cardiac-mps" %}
 {% set name_underscore = "cardiac_mps" %}
-{% set version = "2023.3.0" %}
+{% set version = "2023.3.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -8,7 +8,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name_underscore }}-{{ version }}.tar.gz"
-  sha256: f33a5120552d300fe2067e3f42e6c4bcd1a6ebaad97133f8b9ded6b0035e916b
+  sha256: 7a6121ff7f9b71d2e553a0a4c33322c0fb05e5794dea46c8ffcf563350fee1a1
 
 build:
   number: 0
