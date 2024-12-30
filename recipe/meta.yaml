@@ -11,7 +11,7 @@ source:
   sha256: d85e3bdd57103b44d798d05f619c5d01f5f85b755d47444ff19685c39fae917e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - "mps=mps.__main__:app"
@@ -23,10 +23,10 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - ap_features
     - imageio
     - imageio-ffmpeg
@@ -42,6 +42,7 @@ test:
 
   requires:
     - pip
+    - python {{ python_min }}
 
   commands:
     - pip check
