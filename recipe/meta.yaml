@@ -1,6 +1,6 @@
 {% set name = "cardiac-mps" %}
 {% set name_underscore = "cardiac_mps" %}
-{% set version = "2024.0.0" %}
+{% set version = "2025.0.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -8,10 +8,10 @@ package:
 
 source:
   url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name_underscore }}-{{ version }}.tar.gz"
-  sha256: d85e3bdd57103b44d798d05f619c5d01f5f85b755d47444ff19685c39fae917e
+  sha256: 978f0d186c25f8a5ebea343d155f53ea0b4ac379fbbcce6ec442a99bfee34bcc
 
 build:
-  number: 2
+  number: 0
   noarch: python
   entry_points:
     - "mps=mps.__main__:app"
